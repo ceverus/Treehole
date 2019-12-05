@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/First_page/First_page",
+    "pages/Login/Login",
+    "pages/Main_page/Main_page",
+    "pages/Creat_Topic/Creat_Topic",
+    "pages/Creat_Sell_post/Creat_Sell_post",
+    "pages/Choose_Type/Choose_Type",
+    "pages/Mine_page/Mine_page",
+    "pages/Reply_page/Reply_page",
+    "pages/Up_Invitation/Up_Invitation",
+    "pages/Mine_Reply/Mine_Reply",
+    "pages/Mine_Mypost/Mine_Mypost",
+    "pages/Mine_MySell/Mine_MySell",
+    "pages/Mine_message/Mine_message",
+    "pages/chat/chat"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "老年人树洞",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/Main_page/Main_page",
+        "iconPath": "images/gc1.png",
+        "selectedIconPath": "images/gc2.png",
+        "text": "广场"
+      },
+      {
+        "pagePath": "pages/Choose_Type/Choose_Type",
+        "iconPath": "images/pic_un_fb.png",
+        "selectedIconPath": "images/pic_on_fb.png",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/Mine_page/Mine_page",
+        "iconPath": "images/pic_un_mine.png",
+        "selectedIconPath": "images/pic_on_mine.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

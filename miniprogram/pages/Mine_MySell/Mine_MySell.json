@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#white",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的出售",
+  "enablePullDownRefresh": true
+}

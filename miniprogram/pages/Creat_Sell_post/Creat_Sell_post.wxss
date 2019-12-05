@@ -1,0 +1,203 @@
+
+.head_view{
+  background: white;
+  width: 100%;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.text_view
+{
+  margin-top: 10rpx;
+  color: #8a8a8a;
+  font-size: 30rpx;
+  height: 180rpx;
+}
+
+
+.three_view
+{
+  width:100%;
+  flex-direction: column;
+  display: flex;
+  margin-left: 20rpx;
+}
+.pictuer_text
+{
+  color: #cdcdcd;
+  font-size: 26rpx;
+  margin-bottom: 15rpx;
+}
+.pictuer_view
+{
+  width: 95%;
+  display: flex;
+  flex-wrap:wrap;
+
+}
+.pictuer_view image
+{
+  margin: 0 10rpx;
+  border: 1rpx solid #e6e6e6;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+
+}
+
+.type_text{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.address{
+  width: 30%;
+  height:60rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+
+.type_text picker
+{
+  width:70%;
+  height:60rpx;
+  justify-content:flex-end;
+  align-items: center;
+  display:flex;
+  color: skyblue;
+  font-size: 32rpx;
+}
+
+.main_view
+{
+  background: white;
+  width: 100%;
+  height: 450rpx;
+  margin-top: 20rpx;
+  display: grid;
+  grid-template-rows: 33.33%;
+}
+
+.price{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom:1rpx dashed #cdcdcd;
+  font-size: 32rpx;
+}
+
+.vw_price{
+  width: 200rpx;
+  display: flex;
+  margin-left: 20rpx;
+  align-items: center;
+}
+
+.vw_inputprice{
+  width: 450rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.vw_image{
+  width: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.vw_image image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.sort{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom:1rpx dashed #cdcdcd;
+  font-size: 32rpx;
+}
+
+.vw_sort{
+  width: 200rpx;
+  display: flex;
+  margin-left: 20rpx;
+  align-items: center;
+  
+}
+
+.vw_pay{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.pay_tx{
+  margin-top: 30rpx;
+  width: 250rpx;
+  margin: auto;
+}
+
+
+.vw_inputsort{
+  width: 480rpx;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.vw_inputsort image{
+  width: 30rpx;
+  height: 30rpx; 
+}
+
+.way{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom:1rpx dashed #cdcdcd;
+  font-size: 32rpx;
+}
+
+.vw_way{
+  width: 300rpx;
+  display: flex;
+  margin-left: 20rpx;
+  align-items: center;
+}
+
+.vw_inputway{
+  width: 380rpx;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.vw_inputway image{
+  width: 30rpx;
+  height: 30rpx; 
+}
+
+.button_view
+{
+  position: absolute;
+  bottom: 80rpx;
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+}
+.upload_button
+{
+  width: 400rpx;
+  height: 80rpx;
+  border-radius: 45rpx;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: white;
+  background-color: #3B49E0; 
+  box-shadow:0px 0px 30px 0px rgba(59, 73, 244, 0.3);
+}

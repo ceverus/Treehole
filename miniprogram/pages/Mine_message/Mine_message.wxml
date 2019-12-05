@@ -1,0 +1,39 @@
+
+<block wx:for="{{wantList.length}}" wx:key="key">
+  <view class='inf_view' bindtap="gotoChat" data-heopenid="{{wantList[index].wantOpenid}}">
+    <view class='fac_inf'>
+        <view style='width:110rpx;height:110rpx;display: flex;justify-content: center;align-items: center;'>
+          <image src='{{wantList[index].headUrl}}' style='width:110rpx;height:110rpx;border-radius:100%'></image>
+        </view>
+
+        <view class='text_view'>
+          <view class='name_view'>
+            <view>{{wantList[index].userName}}</view>
+            <view class='time_text'>{{wantList[index].wantUserTimeDay}}</view>
+          </view>
+          <view class='time_view'>
+           TA想要我的出售的<text style='color:blue;opacity:0.6'>{{wantList[index].saleType}}</text>
+          </view>
+        </view>
+    </view>
+  </view>
+</block>
+
+<block wx:for="{{wantListYou.length}}" wx:key="key">
+  <view class='inf_view' bindtap="gotoChat" data-heopenid="{{wantListYou[index].wantOpenid}}">
+    <view class='fac_inf'>
+        <view style='width:110rpx;height:110rpx;'>
+          <image src='{{wantListYou[index].headUrl}}' style='width:110rpx;height:110rpx;border-radius:100%;'></image>
+        </view>
+        <view class='text_view'>
+          <view class='name_view'>
+            <view>{{wantListYou[index].userName}}</view>
+            <view class='time_text'>{{wantListYou[index].wantUserTimeDay}}</view>
+          </view>
+          <view class='time_view'>
+           我想要TA的出售的{{wantListYou[index].saleType}}
+          </view>
+        </view>
+    </view>
+  </view>
+</block>

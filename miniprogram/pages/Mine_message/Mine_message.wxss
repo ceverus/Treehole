@@ -1,0 +1,54 @@
+.inf_view
+{
+  width:100%;
+  height:150rpx;
+  background-color:#FFFFFF;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx silver solid;
+}
+.fac_inf
+{
+  margin-left: 50rpx;
+  height:150rpx;
+  width:86%;
+  align-items: center;
+  display: flex;
+}
+
+.text_view
+{
+  width:100%;
+  height:140rpx;
+
+  margin-left: 40rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.time_view
+{
+  font-size: 28rpx;
+  color:#bfbfbf;
+  margin-top:10rpx;
+ 
+}
+.name_view
+{
+  font-size: 33rpx;
+  font-weight: bold;
+  flex-direction: row;
+  display: flex;
+  color:black;
+}
+.time_text
+{
+  font-size:25rpx;
+  color:#bfbfbf; 
+  font-weight: normal;
+  width:390rpx; 
+
+  justify-content: flex-end;
+  display: flex;
+}

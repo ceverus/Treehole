@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#white",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的评论区域",
+  "enablePullDownRefresh": true
+}

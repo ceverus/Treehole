@@ -1,0 +1,122 @@
+<view class='main'>
+<view class='navbar_main'>
+<!-->头部<-->
+  <view class="navbar"> 
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+    </view> 
+      <!--树洞广场-->
+    <view hidden="{{currentTab!==0}}"> 
+     <view wx:for="{{DataPostArry.length}}" wx:key='DataPostArry.length' class = 'item-contain' ><!--循环生成body-->
+      <view class='top'>
+        <view class='hidden_head'>
+
+          <view class='userphoto'><image src='{{UserHeadurlArry[index]}}'></image></view>
+          <view class='username'><label class='lb_name'>{{UsernameArry[index]}}</label></view>
+          <view class='time'><label class='lb_time'>{{DataPostArry[index].Time}}</label></view>
+        </view>
+        <view class='hidden_second'>
+          <label class='lb_tx'>{{DataPostArry[index].Context}}</label>
+        </view>
+        <view class='hidden_third'>
+         <image wx:for="{{DataPostArry[index].Photo_arr}}" wx:key='Photo_arr' wx:for-item="url" src='{{url}}' bindtap="previewImage" data-myimg='{{url}}' ></image>
+        </view>
+        <view class='hidden_buttom'>
+          <view class='b_1'><text>{{DataPostArry[index].Type}}</text></view>
+           <block wx:if="{{DataPostArry[index]._openid==UserId}}"> 
+          <view class='b_11' bindtap='Remove_Post' data-post_id="{{DataPostArry[index]._id}}" data-postopenid="{{DataPostArry[index]._openid}}" data-nowIndex="{{index}}"><image src='/images/del1.png'></image><label>删除</label></view>
+          </block>
+          <block wx:else>
+          <view class='b_11_2'></view>
+          </block>
+
+
+          <block wx:if="{{UpArray[index]==0}}">
+          <view class='b_2' bindtap='upclickbutton' data-post_id="{{DataPostArry[index]._id}}" data-postopenid="{{DataPostArry[index]._openid}}" data-nowIndex="{{index}}"><image src='/images/dz.png'></image></view>
+          </block>
+
+          <block wx:else>
+           <view class='b_2' bindtap='upclickbutton' data-post_id="{{DataPostArry[index]._id}}" data-postopenid="{{DataPostArry[index]._openid}}" data-nowIndex="{{index}}"><image src='/images/Up_heart.png'></image></view>
+          </block>
+
+          <view class='b_3'><label>{{DataPostArry[index].Up_Record_num}}</label></view>
+          <view class='b_4' bindtap='to_Reply' data-post_id="{{DataPostArry[index]._id}}" data-postopenid="{{DataPostArry[index]._openid}}" data-nowIndex="{{index}}"><image src='/images/Reply.png'></image></view>
+          <view class='b_5'><label>{{DataPostArry[index].Reply_Record_num}}</label></view>
+
+        </view>
+      
+      </view>
+
+    </view>
+
+    </view> 
+      
+    <!--二手交易-->
+<view hidden="{{currentTab!==1}}"> 
+  <view wx:for="{{SellDataPostArry.length}}" wx:key='SellDataPostArry' class = 'item-contain' ><!--循环生成body-->
+      <view class='top'>
+
+<view class='top1'>
+<image class='icon' src='{{SellUserHeadurlArry[index]}}'></image>
+<text class='name'>{{SellUsernameArry[index]}}</text>
+<text class='time'>{{SellDataPostArry[index].Time}}</text>
+</view>
+
+
+<view class='money'>
+<text class='top2text1'>商品价格：</text>
+<text class='money1'>¥</text>
+<text class='money2'>{{SellDataPostArry[index].Price}}</text>
+</view>
+
+<view class='inform'>
+<text class='top2text1'>商品描述：</text>
+<view class='textroom'>
+<text class='top2text2'>{{SellDataPostArry[index].Context}}</text>
+</view>
+</view>
+
+<view class='inform'>
+<text class='top2text1'>类目：</text>
+<text class='top2text2'>{{SellDataPostArry[index].Type}} </text>
+</view>
+
+<view class='inform'>
+<text class='top2text1'>交易方式：</text>
+<text class='top2text2'>{{SellDataPostArry[index].Deal_Type}}</text>
+</view>
+
+<view class='top3'>
+<image wx:for="{{SellDataPostArry[index].Photo_arr}}" wx:key='SellPhoto_arr' wx:for-item="url" src='{{url}}'
+bindtap="previewImage" data-myimg='{{url}}' ></image>
+</view>
+
+<view class='top4'>
+
+
+<view class='b_1'>
+
+  
+ <text>{{SellDataPostArry[index].Type}}</text>
+
+</view>
+
+ <block wx:if="{{SellUpArray[index]==0}}">
+          <view class='b_2' bindtap='wanttobuy' data-buypost_id="{{SellDataPostArry[index]._id}}" data-buypostopenid="{{SellDataPostArry[index]._openid}}" data-buyindex="{{index}}"><image src='/images/buy.png'></image></view>
+          </block>
+
+          <block wx:else>
+           <view class='b_2' bindtap='wanttobuy' data-buypost_id="{{SellDataPostArry[index]._id}}" data-buypostopenid="{{SellDataPostArry[index]._openid}}" data-buyindex="{{index}}"><image src='/images/pic_on_buy.png'></image></view>
+          </block>
+
+<view class='b_3'><text>{{SellDataPostArry[index].Intention_Record_num}} 人想买</text></view>
+
+</view>
+
+</view>
+ </view>
+        </view> <!--currenttab1><-->
+  
+</view>
+
+
+</view>

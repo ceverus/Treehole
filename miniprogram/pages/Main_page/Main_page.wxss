@@ -1,0 +1,414 @@
+.navbar_main{ 
+ display: flex; 
+ flex-direction: column; 
+ height: 100%; 
+} 
+
+.navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #fff; 
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center; 
+ line-height: 80rpx; 
+} 
+.navbar .item.active{ 
+ color: #3B49E0; 
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #3B49E0; 
+}
+
+
+.hidden_body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.hidden_head{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20rpx;
+  align-items: center;
+}
+
+.userphoto{
+  display: flex;
+  margin-left: 30rpx;
+}
+
+.userphoto image{
+  width: 86rpx;
+  height: 86rpx;
+  border-radius:50%; 
+}
+
+.username{
+  display: flex;
+  margin-left: 20rpx;
+  width: 400rpx;
+}
+
+.username label{
+  font-size:34rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:36rpx;
+}
+
+
+.hidden_second{
+  margin-top: 20rpx;
+  margin-left: 135rpx;
+  width: 80%;
+}
+
+.hidden_second label{
+  word-wrap: break-word;
+  font-size:28rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  line-height:44rpx
+}
+
+.hidden_third{
+  margin-top: 20rpx;
+  margin-left: 135rpx;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hidden_third image{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 0 5rpx;
+  border-radius: 20rpx;
+}
+
+.main image:nth-child(1){
+  margin-bottom: 5rpx;
+}
+
+.hidden_buttom {
+  display: flex;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+  flex-direction: row;
+  font-size:24rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(156,162,187,1);
+  line-height:40rpx;
+}
+
+.b_1{
+  width: 400rpx;
+  display: table-cell;
+  justify-content: center;
+}
+
+.b_1 text{
+  margin-left: 50rpx;
+}
+
+.b_11{
+  margin-right: 40rpx;
+}
+.b_11_2{
+  margin-right: 100rpx;
+}
+
+.b_11 image{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.b_2{
+  margin-top: 8rpx;
+}
+
+.b_2 image{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.b_3{
+  margin-left: 15rpx;
+}
+
+.b_4{
+  margin-left: 60rpx;
+  margin-top: 10rpx;
+}
+
+.b_4 image{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.b_5{
+  margin-left: 15rpx;
+}
+
+.time2{
+  display: flex;
+  margin-left: 30rpx;
+  flex-direction: column;
+  align-items: center;
+  width: 86rpx;
+  height: 86rpx;
+  background-image: url(https://7465-textllinpro-5br77-1259605012.tcb.qcloud.la/bg2.png?sign=605266cdde89fa995be38df489c4adfd&t=1563072358);
+  background-size:86rpx; 
+}
+
+.time2 label{
+  flex-wrap: wrap;
+}
+
+.lbt_1{
+  width:53rpx;
+  height:26rpx;
+  font-size:26rpx;
+  font-family:SourceHanSansCN-Bold;
+  font-weight:bold;
+  color:rgba(255,255,255,1);
+  line-height:40rpx;
+}
+
+.lbt_2{
+  width:48rpx;
+  height:16rpx;
+  font-size:23rpx;
+  font-family:SourceHanSansCN-Normal;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:40rpx;
+}
+
+.delete{
+  width:120rpx;
+  height:40rpx;
+  display: flex;
+  align-items: center;
+  margin-left: 50rpx;
+  border:1rpx solid rgba(59,73,224,1);
+  border-radius:20rpx;
+}
+
+.delete button{
+  width:120rpx;
+  height:40rpx;
+  font-size:24rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(59,73,224,1);
+  line-height:36rpx;
+}
+
+
+.top{
+  width:750rpx;
+  background:rgba(255,255,255,1);
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top1{
+  width:750rpx;
+  height:140rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+}
+
+.icon{
+  width:95rpx;
+  height:95rpx;
+  border-radius:43rpx;
+  margin-left: 20rpx;
+}
+
+.name{
+  width:260rpx;
+  height:32rpx;
+  font-size:34rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:36rpx;
+  margin-left: 20rpx;
+}
+
+.time{
+  width:220rpx;
+  height:18rpx;
+  font-size:22rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(156,162,187,1);
+  line-height:40rpx;
+  position: absolute;
+  right: 20rpx;
+  margin-top: -8rpx;
+}
+
+
+.money{
+  width:750rpx;
+  background:rgba(255,255,255,1);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.money1{
+  font-size:30rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgb(243, 65, 65);
+  line-height:44rpx;
+}
+
+.money2{
+  font-size:34rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgb(243, 65, 65);
+  line-height:44rpx;
+  
+}
+
+.inform{
+  width:750rpx;
+  background:rgba(255,255,255,1);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.top2text1{
+  font-size:26rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  line-height:44rpx;
+  margin-left: 126rpx;
+}
+
+.top2text2{
+  font-size:28rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  line-height:44rpx;
+ 
+}
+
+.textroom{
+  width: 397rpx;
+}
+
+.top3{
+  width:600rpx;
+  background:rgba(255,255,255,1);
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 126rpx;
+  margin-top: 26rpx;
+}
+
+.top3 image{
+  width:158rpx;
+  height:158rpx;
+  border-radius: 30rpx;
+}
+
+.top3 image:nth-child(2){
+  margin: 0 20rpx;
+}
+
+.top3 image:nth-child(4){
+  margin-top: 20rpx;
+}
+
+.top3 image:nth-child(5){
+  margin: 20rpx;
+}
+
+.top3 image:nth-child(6){
+  margin-top: 20rpx;
+}
+
+.top4{
+  width:280rpx;
+  background:rgba(255,255,255,1);
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  align-items: center;
+  margin-left: 420rpx;
+  margin-top: 10rpx;
+}
+
+.top4 image{
+  width:30rpx;
+  height:30rpx;
+  margin-top: 12rpx;
+}
+
+.top4 text{
+  font-size:24rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(156,162,187,1);
+  line-height:40rpx;
+  margin-left:10rpx; 
+}
+
+.top4 button{
+  margin-left: 60rpx;
+  margin-right: 5rpx;
+  padding-left: 0rpx;
+  padding-right: 0rpx;
+}
+
+.b_1
+
+.mid{
+  width:750rpx;
+  background:rgba(255,255,255,1);
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mid2{
+  width:600rpx;
+  background:rgba(255,255,255,1);
+  
+   margin-left: 126rpx;
+}
+
+
+.line{
+  width:749px;
+  height:1px;
+  background:rgba(238,238,238,1);
+  margin-top: 20rpx;
+}

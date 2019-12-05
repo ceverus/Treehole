@@ -1,0 +1,72 @@
+<view class='head_view'>
+ <view class="text_view">
+    <textarea placeholder="请输入出售的商品描述 (不少于10个字)" auto-focus maxlength="50" auto-focus="{{false}}" bindinput="getInput"/>
+  </view>
+ <view class="three_view">
+
+  <view>
+    <view style="font-size:36rpx">
+    添加商品图片
+    </view>
+    <view class="pictuer_text">
+    商品图片最多仅支持6张。
+    </view>
+  </view>
+
+  <view class="pictuer_view">
+
+  <block wx:for="{{number}}" wx:if="{{index!=6}}" wx:key="key">
+      <block wx:if="{{index==number-1 }}">
+        <image src="/images/add.png" style="width:160rpx;height:160rpx;border:1rpx solid silver;"bindtap='addImage' ></image>
+      </block>
+      <block wx:else>
+        <image src="{{Filepath[index]}}" style="width:160rpx;height:160rpx;"bindtap='clickimage' data-index="{{index}}" bindlongpress="deleteImage"></image>
+      </block>
+  </block>
+  </view>
+
+   <view class="type_text">
+  <text>标签类型:交易-{{PostType}}</text>
+  <view style="width:55rpx;height:100%"></view>
+  </view>
+
+ </view>
+</view>
+
+<view class='main_view'>
+  <view class='price'>
+    <view class='vw_price'><text>价格:</text></view>
+    <view class='vw_inputprice'><input class='addprice' name='price' bindinput='getPriceinput'  placeholder='输入价格（仅支持整数）' cursor-spacing='140'></input></view>
+    <view class='vw_image'><image src='/images/rmb.png'></image></view>
+  </view>
+  <view class='sort'>
+    <view class='vw_sort'><text>分类:</text></view>
+    <view class='vw_pay'><view class='pay_tx'><text>交易-{{PostType}}</text></view></view>
+
+  </view>
+  <view class='way'>
+
+    <view class='vw_way'>
+    <text>交易方式:{{SellTypearr[SellTypeindex]}}</text>
+    </view>
+
+    <view class='vw_inputway'>
+
+     <picker bindchange="bindPickerChange" value="{{SellTypeindex}}" range="{{SellTypearr}}">
+    <view class="picker">
+    <image src='/images/jt.png'></image>
+      </view>
+  </picker>
+    </view>
+
+        
+  
+
+
+  </view>
+
+</view>
+
+<view class="button_view">
+  <button class="upload_button" bindtap='upload'>发     布</button>
+</view>

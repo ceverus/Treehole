@@ -1,0 +1,49 @@
+  <view wx:for="{{Sell_DataPost_arry.length}}" wx:key='Sell' class = 'item-contain' ><!--循环生成body-->
+      <view class='top'>
+
+<view class='top1'>
+<image class='icon' src='{{Sell_User_head_url_arry[index]}}'></image>
+<text class='name'>{{Sell_Username_arry[index]}}</text>
+<text class='time'>{{Sell_DataPost_arry[index].Time}}</text>
+</view>
+
+
+<view class='money'>
+<text class='top2text1'>商品价格：</text>
+<text class='money1'>¥</text>
+<text class='money2'>{{Sell_DataPost_arry[index].Price}}</text>
+</view>
+
+<view class='inform'>
+<text class='top2text1'>商品描述：</text>
+<view class='textroom'>
+<text class='top2text2'>{{Sell_DataPost_arry[index].Context}}</text>
+</view>
+</view>
+
+<view class='inform'>
+<text class='top2text1'>类目：</text>
+<text class='top2text2'>{{Sell_DataPost_arry[index].Type}} </text>
+</view>
+
+<view class='inform'>
+<text class='top2text1'>交易方式：</text>
+<text class='top2text2'>{{Sell_DataPost_arry[index].Deal_Type}}</text>
+</view>
+
+<view class='top3'>
+<image wx:for="{{Sell_DataPost_arry[index].Photo_arr}}" wx:key='photo' wx:for-item="url" src='{{url}}' bindtap="previewImage" data-myimg='{{url}}' ></image>
+</view>
+
+<view class='top4'>
+
+<view class='tb_1'><text>{{Sell_DataPost_arry[index].Type}}</text></view>
+          <view class='b_2'></view>
+        
+
+<view class='b_3'><text>{{Sell_DataPost_arry[index].Intention_Record_num}} 人想买</text></view>
+
+</view>
+
+</view>
+ </view>

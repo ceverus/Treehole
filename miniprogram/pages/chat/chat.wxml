@@ -1,0 +1,89 @@
+<!--miniprogram/pages/chat/chat.wxml-->
+<!--先判断进入这个页面人的id-->
+<block wx:if="{{type==0}}">
+  <block wx:for="{{chatList.length}}" wx:key="key">
+      <block wx:if="{{chatList[index].who==0}}">
+        <view class='mychat'>
+          <view class='my1'>
+            <view class='textroom'>
+              <view class='invite'>
+                {{chatList[index].content}}
+              </view>
+            </view>
+            <view class= 'myimg'>
+            <image src='{{myUrl}}' class='myicon'></image>
+            </view>
+          </view>
+          <view class='my2'>
+          <text class='time'>{{chatList[index].time}}</text>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='hechat'>
+          <view class='he1'>
+            <view class='heimg'>
+              <image src='{{heUrl}}' class='heicon'></image>
+            </view>
+            <view class='textroom2'>
+              <view class='invite2'>
+                {{chatList[index].content}}
+              </view>
+            </view>
+          </view>
+          <view class='he2'>
+          <text class='time2'>{{chatList[index].time}}</text>
+          </view>
+        </view>
+      </block>
+  </block>
+</block>
+<block wx:else>
+  <block wx:for="{{chatList.length}}" wx:key="key">
+      <block wx:if="{{chatList[index].who==1}}">
+        <view class='mychat'>
+          <view class='my1'>
+            <view class='textroom'>
+              <view class='invite'>
+                {{chatList[index].content}}
+              </view>
+            </view>
+            <view class= 'myimg'>
+            <image src='{{myUrl}}' class='myicon'></image>
+            </view>
+          </view>
+          <view class='my2'>
+          <text class='time'>{{chatList[index].time}}</text>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='hechat'>
+          <view class='he1'>
+            <view class='heimg'>
+              <image src='{{heUrl}}' class='heicon'></image>
+            </view>
+            <view class='textroom2'>
+              <view class='invite2'>
+                {{chatList[index].content}}
+              </view>
+            </view>
+          </view>
+          <view class='he2'>
+          <text class='time2'>{{chatList[index].time}}</text>
+          </view>
+        </view>
+      </block>
+  </block>
+</block>
+
+
+
+<view class="input_view">
+  <view class="bottom_two_view1">
+    <input  class='send_input' bindinput="getInput" value="{{telValue}}"></input>
+  </view>
+  <view class="bottom_two_view2">
+  <button class='send_button' bindtap="sendInf">发送</button>
+  </view>
+</view>

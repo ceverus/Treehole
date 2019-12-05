@@ -1,0 +1,79 @@
+.main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.head{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+
+.first1{
+  height: 220rpx;
+  margin-top: 20rpx;
+  text-align: center;
+}
+.first1 image{
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.main_list{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+}
+
+.list1{
+  margin-left: 60rpx;
+}
+
+.ima{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 30rpx;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.ima image{
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.tx{
+  width: 200rpx;
+  height: 50rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.list3{
+  margin-left: 30rpx;
+}
+
+.list2{
+  margin-left: 30rpx;
+}
+
+.mid{
+  margin-top: 30rpx;
+}
+
+
+.con{
+  height: 250rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.con image{
+  width: 180rpx;
+  height: 180rpx;
+  margin-top: 50rpx;
+}

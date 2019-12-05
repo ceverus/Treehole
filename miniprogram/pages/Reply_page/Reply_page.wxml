@@ -1,0 +1,57 @@
+<!--miniprogram/pages/topic/topic.wxml-->
+
+<view class='top'>
+  <view class='top1'>
+    <image class='icon' src="{{PostUserData[0].User_head_url}}"></image>
+    <text class='name'>{{PostUserData[0].Username}}</text>
+    <text class='time'>{{PageData.Time}}</text>
+  </view>
+
+  <view class='top2'>
+    <text>{{PageData.Context}}</text>
+  </view>
+
+  <view class='top3'>
+    <block wx:for="{{PageData.Photo_arr}}" wx:key="key">
+      <image src="{{item}}"></image>
+    </block>
+  </view>
+  <view class='top4'></view>
+</view>
+
+<view class='mid'>
+  <block wx:for="{{dataArray}}" wx:key="key" wx:index="index">
+
+    <view class='top1'>
+      <image class='icon' src='{{item.image}}'></image>
+      <text class='name'>{{item.name}}</text>
+      <text class='time'>{{item.PageTime}}</text>
+    </view>
+
+    <view class='top2'>
+      <text bindlongpress="showModal" data-target="bottomModal">{{item.context}}</text>
+
+      <block wx:if="{{dataArray[index]._openid==ReplyOpenId}}">
+        <view class='b_11' bindtap='Remove_Post' data-post_id="{{item._id}}">
+          <image src='/images/del1.png'></image>
+          <label>删除</label>
+        </view>
+      </block>
+      <view class='line'></view>
+    </view>
+  </block>
+</view>
+  <view style="height:130rpx;"></view>
+  <form bindsubmit="formSubmit" style="position:fixed;bottom:0;">
+    <view class='buttom'>
+      <view class='inp'>
+        <!-->
+        <image src='/images/topic/fb.png'></image>
+        <-->
+          <input placeholder="写评论..." name="userName" value="{{inputMessage}}" cursor-spacing="20"></input>
+      </view>
+      <button form-type="submit">
+        <text class='fb'>发表</text>
+      </button>
+    </view>
+  </form>

@@ -1,0 +1,48 @@
+<view class='head_view'>
+ <view class="text_view">
+    <textarea placeholder="请填写话题内容 (不少于2个字)" auto-focus maxlength="50" auto-focus="{{false}}" bindinput="getInput"/>
+  </view>
+</view>
+
+<view class='main_view'>
+ <view class="three_view">
+
+  <view>
+    <view style="font-size:36rpx">
+    添加图片
+    </view>
+    <view class="pictuer_text">
+     图片仅支持6张
+    </view>
+  </view>
+
+  <view class="pictuer_view">
+
+  <block wx:for="{{number}}" wx:if="{{index!=6}}" wx:key="key">
+      <block wx:if="{{index==number-1 }}">
+        <image src="../../images/add.png" style="width:160rpx;height:160rpx;border:1rpx solid silver;"bindtap='addImage' ></image>
+      </block>
+      <block wx:else>
+        <image src="{{Filepath[index]}}" style="width:160rpx;height:160rpx;"bindtap='clickimage' data-index="{{index}}" bindlongpress="deleteImage"></image>
+      </block>
+  </block>
+
+
+  </view>
+
+  <view class="type_text">
+  <text>标签类型:{{PostType}}</text>
+   <!--> <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+     标签   #{{array[index]}}
+    </view>
+  </picker><-->
+  <view style="width:55rpx;height:100%"></view>
+  </view>
+
+ </view>
+</view>
+
+<view class="button_view">
+  <button class="upload_button" bindtap='upload'>发     布</button>
+</view>

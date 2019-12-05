@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#white",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "评论区",
+  "enablePullDownRefresh": true
+
+}

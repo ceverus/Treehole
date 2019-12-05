@@ -1,0 +1,14 @@
+
+<import src="../../template/template.wxml"/><!--miniprogram/pages/sdsq/sdsq.wxml-->
+<view class='main'>
+  <view class='head'>
+    <view class='ima'><image src='/images/sq.png'></image></view>
+    <view class='lb'><label>小程序需要您的微信授权才能使用哦！</label></view>
+  </view>
+  <view class='body'>
+    <view class='unlb'>
+     <button open-type="getUserInfo" class='ubutton' bindgetuserinfo="onGetOpenid">微信登录授权</button>
+    </view>
+  </view>
+
+</view>

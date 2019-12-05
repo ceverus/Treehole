@@ -1,0 +1,53 @@
+<view class="head_view">
+ <view style="width:50%;height:100%;display:flex;align-items: center;justify-content: center;font-size:{{size1}};  border-bottom:4rpx solid {{color1}};color:{{color1}}" bindtap="click" id="v1">
+    评论我的
+ </view>
+ <view style="width:50%;height:100%;display:flex;align-items: center;justify-content: center;font-size:{{size2}};border-bottom:4rpx solid {{color2}};color:{{color2}}" bindtap="click" id="v2">
+    我的评论
+ </view>
+</view>
+
+<block wx:for="{{discussList.length}}" wx:key="key" wx:index="index">
+<view style='width:100%;height:200rpx;display: flex;flex-direction: row;' >
+  <view class='left_view'>
+    <view style='width:80%;height:35rpx; border-right:  1rpx solid #bfbfbf;'></view>
+    <view class='data_text_view'>
+      <view class='data_text'>{{discussList[index].discussTimeDay}}</view>
+      <view class='yuandian' style='opacity:0.8'>
+      </view>
+    </view>
+    <view class='min_data_text'>
+    {{discussList[index].discussTimeHour}}
+    </view>
+  </view>
+
+  <view class='right_view'> 
+    <view class='name_view'>
+    <block wx:if="{{flag==0}}">
+      <text style='color:blue'>{{discussList[index].postUserName}} </text>
+      评论我的帖子
+    </block>
+    <block wx:else>
+    我评论了
+     <text style='color:blue'>{{discussList[index].postUserName}}</text>
+      帖子
+    </block>
+    </view>
+
+
+    <view style='width:100%;height:124rpx; display: flex;flex-direction: row;' bindtap="gotoPost" data-post_id="{{discussList[index].discussPostId}}" data-postopenid="{{discussList[index].discussUserId}}">
+      <view class="image_view">
+        <image src='{{discussList[index].postHeadUrl}}' style='width:100rpx;height:100rpx;border-radius:10rpx'>
+        </image>
+      </view>
+
+      <view class="neirong_view">
+        <view>
+       {{discussList[index].postContext}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+</block>
