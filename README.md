@@ -14,4 +14,3 @@
 
 - [ColorUI组件库](https://github.com/weilanwl/ColorUI)
 
-![wx](https://raw.githubusercontent.com/vichugoc/Treehole/master/miniprogram/images/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BA%95%E9%83%A8.png)
